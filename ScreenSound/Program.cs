@@ -1,5 +1,25 @@
-﻿using ScreenSound.Menus;
+﻿using ScreenSound.Banco;
+using ScreenSound.Menus;
 using ScreenSound.Modelos;
+
+try
+{
+    var ArtistaDAL = new ArtistaDAL();
+    //ArtistaDAL.Adicionar(new Artista("Netuno", "Sei lá"));
+    //ArtistaDAL.Atualizar(new Artista("Netuno", "The best do mundo!"), 2);
+    ArtistaDAL.Deletar(2);
+    var listaArtistas = ArtistaDAL.Listar();
+
+    foreach (var artista in listaArtistas)
+    {
+        Console.WriteLine(artista);
+    }
+} catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+return;
 
 Artista ira = new Artista("Ira!", "Banda Ira!");
 Artista beatles = new("The Beatles", "Banda The Beatles");
