@@ -13,7 +13,7 @@ internal class ScreenSoundContext : DbContext
 {
     public DbSet<Artista> Artistas { get; set; }
     public DbSet<Musica> Musica { get; set; }
-    private string connectionString = "Data Source=NIKKI\\MSSQL;Initial Catalog=ScreenSound;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+    private string connectionString = "Data Source=NIKKI\\MSSQL;Initial Catalog=ScreenSoundV0;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
